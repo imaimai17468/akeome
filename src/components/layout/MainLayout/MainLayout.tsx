@@ -5,7 +5,7 @@ export const MainLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Fireworks />
       <div>
-        <main className="min-h-screen flex items-center justify-center z-50">
+        <main className="min-h-screen flex items-center justify-center">
           {children}
         </main>
       </div>
