@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="flex items-start justify-center w-full p-2 border-t text-white text-sm flex-col">
+    <footer className="flex items-start justify-center w-full p-2 text-white text-sm flex-col">
       <p>Build by かろ噴水</p>
       <div className="flex gap-1">
         <p>The source code is available on </p>
