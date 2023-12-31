@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-fix": "eslint --cache --fix src/ && prettier --write src/"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "lucide-react": "^0.303.0",
@@ -22,14 +25,20 @@
     "tsparticles-preset-fireworks": "^2.12.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "add": "^2.0.6",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.0.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-tailwindcss": "^3.13.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "postcss": "^8",
+    "prettier": "^3.1.1",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "typescript": "^5.3.3"
   }
 }
