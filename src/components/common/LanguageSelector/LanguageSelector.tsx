@@ -9,21 +9,22 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useState, useEffect } from "react";
+import { AkeomeKeys } from "@/types/Akeome.types";
 
 type LanguageSelectorProps = {
-  onChange: (language: string) => void;
+  onChange: (language: AkeomeKeys) => void;
 };
 
 export const LanguageSelector = ({ onChange }: LanguageSelectorProps) => {
-  const [language, setLanguage] = useState<string>("");
+  const [language, setLanguage] = useState<AkeomeKeys>("japanese");
 
   useEffect(() => {
     onChange(language);
   }, [language]);
 
   return (
-    <Select onValueChange={(value) => setLanguage(value)}>
-      <SelectTrigger className="w-24">
+    <Select onValueChange={(value: AkeomeKeys) => setLanguage(value)} defaultValue="japanese">
+      <SelectTrigger className="w-32">
         <SelectValue placeholder="lang" />
       </SelectTrigger>
       <SelectContent>

@@ -1,15 +1,20 @@
 "use client";
 
-import { RandomlyGenerateAkeome } from "@/utils/RandomlyGenerateAkeome";
+import { GenerateAkeome } from "@/utils/GenerateAkeome";
 import { useState, useEffect } from "react";
+import { AkeomeKeys } from "@/types/Akeome.types";
 
-export const Akeome = () => {
+type AkeomeProps = {
+  language: AkeomeKeys;
+};
+
+export const Akeome = ({ language }: AkeomeProps) => {
   const [akeomeMessage, setAkeomeMessage] = useState("");
 
   useEffect(() => {
-    setAkeomeMessage(RandomlyGenerateAkeome());
-  }, []);
-  
+    setAkeomeMessage(GenerateAkeome(language));
+  }, [language]);
+
   return (
     <h1 className="text-white text-8xl font-black animate-bounce">
       {akeomeMessage}
