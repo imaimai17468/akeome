@@ -1,3 +1,3 @@
-import { AkeomePage } from "@/components/page/AkeomePage";
+import { AkeomePage } from '@/components/page/AkeomePage';
 
 export default AkeomePage;

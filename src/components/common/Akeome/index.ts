@@ -1,1 +1,1 @@
-export { Akeome } from "./Akeome";
+export { Akeome } from './Akeome';

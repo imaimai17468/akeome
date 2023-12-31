@@ -1,1 +1,1 @@
-export { AkeomePage } from "./AkeomePage";
+export { AkeomePage } from './AkeomePage';

@@ -1,23 +1,22 @@
-"use client";
+'use client';
 
-import { GenerateAkeome } from "@/utils/GenerateAkeome";
-import { useState, useEffect } from "react";
-import { AkeomeKeys } from "@/types/Akeome.types";
+import { useState, useEffect } from 'react';
+
+import { AkeomeKeys } from '@/types/Akeome.types';
+import { GenerateAkeome } from '@/utils/GenerateAkeome';
 
 type AkeomeProps = {
   language: AkeomeKeys;
 };
 
 export const Akeome = ({ language }: AkeomeProps) => {
-  const [akeomeMessage, setAkeomeMessage] = useState("");
+  const [akeomeMessage, setAkeomeMessage] = useState('');
 
   useEffect(() => {
     setAkeomeMessage(GenerateAkeome(language));
   }, [language]);
 
   return (
-    <h1 className="text-white text-6xl sm:text-8xl font-black animate-bounce">
-      {akeomeMessage}
-    </h1>
+    <h1 className="animate-bounce text-6xl font-black text-white sm:text-8xl">{akeomeMessage}</h1>
   );
 };

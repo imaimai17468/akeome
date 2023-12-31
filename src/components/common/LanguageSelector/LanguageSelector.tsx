@@ -1,22 +1,23 @@
-"use client";
+'use client';
 
-import { languageList } from "@/constants/akeome.const";
+import { useState, useEffect } from 'react';
+
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { useState, useEffect } from "react";
-import { AkeomeKeys } from "@/types/Akeome.types";
+} from '@/components/ui/select';
+import { languageList } from '@/constants/akeome.const';
+import { AkeomeKeys } from '@/types/Akeome.types';
 
 type LanguageSelectorProps = {
   onChange: (language: AkeomeKeys) => void;
 };
 
 export const LanguageSelector = ({ onChange }: LanguageSelectorProps) => {
-  const [language, setLanguage] = useState<AkeomeKeys>("japanese");
+  const [language, setLanguage] = useState<AkeomeKeys>('japanese');
 
   useEffect(() => {
     onChange(language);
