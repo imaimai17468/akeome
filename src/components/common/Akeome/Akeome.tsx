@@ -16,7 +16,7 @@ export const Akeome = ({ language }: AkeomeProps) => {
   }, [language]);
 
   return (
-    <h1 className="text-white text-8xl font-black animate-bounce">
+    <h1 className="text-white text-6xl sm:text-8xl font-black animate-bounce">
       {akeomeMessage}
     </h1>
   );
