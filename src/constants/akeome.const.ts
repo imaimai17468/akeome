@@ -1,3 +1,5 @@
+import { AkeomeKeys } from "@/types/Akeome.types";
+
 export const akeome = {
   english: "A happy new year!",
   french: "Bonne Année!",
@@ -23,4 +25,4 @@ export const akeome = {
   japanese: "あけおめ！",
 };
 
-export const languageList = Object.keys(akeome);
+export const languageList = Object.keys(akeome) as AkeomeKeys[];
