@@ -1,9 +1,3 @@
-import { Akeome } from "@/components/common/Akeome";
+import { AkeomePage } from "@/components/page/AkeomePage";
 
-export default function Home() {
-  return (
-    <div className="z-10">
-      <Akeome /> 
-    </div>
-  );
-}
+export default AkeomePage;
