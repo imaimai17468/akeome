@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "../styles/globals.css";
+import { MainLayout } from "@/components/layout/MainLayout/MainLayout";
 
 export const metadata: Metadata = {
   title: "akeo.me",
@@ -13,7 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body>
+        <MainLayout>
+          {children}
+        </MainLayout>
+      </body>
     </html>
   );
 }
